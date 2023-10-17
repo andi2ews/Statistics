@@ -1,0 +1,10 @@
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\bin\Debug\Data Structures.exe.config
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\bin\Debug\Data Structures.exe
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\bin\Debug\Data Structures.pdb
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data Structures.csproj.AssemblyReference.cache
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data_Structures.Properties.Resources.resources
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data Structures.csproj.GenerateResource.cache
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data Structures.csproj.CoreCompileInputs.cache
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data Structures.exe
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data Structures.pdb
+C:\Users\andsa\OneDrive\Desktop\Cybersecurity\Statistics\C#\HW2\Data Structures\obj\Debug\Data_Structures.Form1.resources

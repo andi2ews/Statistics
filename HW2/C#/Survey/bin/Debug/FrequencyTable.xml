@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <Value>2</Value>
+    <Frequency>10</Frequency>
+    <Relative_x0020_frequency>0,1694915</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>16,94915%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value>3</Value>
+    <Frequency>24</Frequency>
+    <Relative_x0020_frequency>0,4067796</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>40,67797%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value>4</Value>
+    <Frequency>15</Frequency>
+    <Relative_x0020_frequency>0,2542373</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>25,42373%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value>1</Value>
+    <Frequency>1</Frequency>
+    <Relative_x0020_frequency>0,01694915</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>1,694915%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value />
+    <Frequency>3</Frequency>
+    <Relative_x0020_frequency>0,05084746</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>5,084746%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value>5</Value>
+    <Frequency>5</Frequency>
+    <Relative_x0020_frequency>0,08474576</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>8,474576%</Percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Value>0</Value>
+    <Frequency>1</Frequency>
+    <Relative_x0020_frequency>0,01694915</Relative_x0020_frequency>
+    <Percentage_x0020_frequency>1,694915%</Percentage_x0020_frequency>
+  </Table>
+</DocumentElement>

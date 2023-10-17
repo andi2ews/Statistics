@@ -1,0 +1,10 @@
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\bin\Debug\RandomDistribution.exe.config
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\bin\Debug\RandomDistribution.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\bin\Debug\RandomDistribution.pdb
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.csproj.AssemblyReference.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.Form1.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.Properties.Resources.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.csproj.GenerateResource.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.csproj.CoreCompileInputs.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\RandomDistribution\obj\Debug\RandomDistribution.pdb

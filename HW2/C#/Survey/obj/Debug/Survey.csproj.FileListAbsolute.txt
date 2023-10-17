@@ -1,0 +1,10 @@
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\bin\Debug\Survey.exe.config
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\bin\Debug\Survey.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\bin\Debug\Survey.pdb
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.csproj.AssemblyReference.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.Form1.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.Properties.Resources.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.csproj.GenerateResource.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.csproj.CoreCompileInputs.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW2\C#\Survey\obj\Debug\Survey.pdb

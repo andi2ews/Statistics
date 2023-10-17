@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>22 : F</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>3</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,05084746</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>5,084746%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>22 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>13</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,220339</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>22,0339%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>23 : F</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>5</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,08474576</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>8,474576%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>23 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>12</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,2033898</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>20,33898%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>21 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>6</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,1016949</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>10,16949%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>24 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>5</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,08474576</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>8,474576%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>25 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>5</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,08474576</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>8,474576%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>27 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>4</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,06779661</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>6,779661%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>39 : F</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>1</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,01694915</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>1,694915%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>26 : M</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>2</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,03389831</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>3,389831%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>22 : nb</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>1</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,01694915</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>1,694915%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>22 : f</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>1</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,01694915</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>1,694915%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+  <Table>
+    <Age_x0020__x007C__x0020_Sex>21 : f</Age_x0020__x007C__x0020_Sex>
+    <Joint_x0020_requency>1</Joint_x0020_requency>
+    <Joint_x0020_relative_x0020_frequency>0,01694915</Joint_x0020_relative_x0020_frequency>
+    <Joint_x0020_percentage_x0020_frequency>1,694915%</Joint_x0020_percentage_x0020_frequency>
+  </Table>
+</DocumentElement>
