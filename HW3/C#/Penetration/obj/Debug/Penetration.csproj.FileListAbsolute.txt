@@ -1,0 +1,10 @@
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\bin\Debug\Penetration.exe.config
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\bin\Debug\Penetration.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\bin\Debug\Penetration.pdb
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.csproj.AssemblyReference.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.Form1.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.Properties.Resources.resources
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.csproj.GenerateResource.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.csproj.CoreCompileInputs.cache
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.exe
+C:\Users\andsa\OneDrive\Desktop\Statistics\HW3\C#\Penetration\obj\Debug\Penetration.pdb
