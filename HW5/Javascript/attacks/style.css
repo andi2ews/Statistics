@@ -1,0 +1,52 @@
+.resizable-rectangle {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+  }
+
+/* Stili per l'intero contenitore */
+.container {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione del flex container su colonna */
+    align-items: flex-start; /* Allineamento in alto */
+  }
+  
+  /* Stili per il gruppo 1 (primo input di numero e bottone) */
+  .group1 {
+    display: flex;
+    align-items: center; /* Allinea gli elementi verticalmente al centro */
+  }
+  
+  /* Stili per gli input di tipo number nel gruppo 1 */
+  .group1 input[type="number"] {
+    width: 50px; /* Larghezza personalizzabile */
+    margin-right: 10px; /* Spazio tra il primo input e il bottone */
+    padding: 5px;
+  }
+  
+  /* Stili per il bottone nel gruppo 1 */
+  .group1 button {
+    background-color: #0074d9; /* Colore di sfondo personalizzabile */
+    color: #fff; /* Colore del testo personalizzabile */
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  /* Stili per il bottone al passaggio del mouse (hover) */
+  .group1 button:hover {
+    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+  }
+  
+  /* Stili per il gruppo 2 (secondo input di numero) */
+  .group2 {
+    display: flex;
+    align-items: center; /* Allinea gli elementi verticalmente al centro */
+  }
+  
+  /* Stili per il secondo input di numero nel gruppo 2 */
+  .group2 input[type="number"] {
+    width: 50px; /* Larghezza personalizzabile */
+    margin-right: 10px; /* Spazio tra il secondo input e il bottone */
+    padding: 5px;
+  }
