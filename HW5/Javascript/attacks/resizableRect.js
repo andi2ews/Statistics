@@ -49,31 +49,6 @@ class ResizableRectangle {
   }
 
 
-  getScore(attacks, type) {
-    let score = [];
-    let prova = {};
-    for (let i = 0; i < attacks.length; i++) {
-      let sum = 0;
-      switch(type) {
-        case 'score':
-          sum = attacks[i].reduce((a, b) => a + b, 0);
-          score.push(sum);
-          sum in prova ? prova[sum] += 1 : prova[sum] = 1;
-          break;
-        case 'frequency':
-          sum = attacks[i].filter(x => x === -1).length
-          score.push(sum);
-          sum in prova ? prova[sum] += 1 : prova[sum] = 1;
-          break;
-        default:
-          break;
-      }
-    }
-    console.log(prova);
-    //return score;
-    return prova;
-  }
-
   DrawHistogramArea(height, len) {
     this.context.beginPath();
     this.context.moveTo(len, 0); 
@@ -83,39 +58,86 @@ class ResizableRectangle {
   }
 
 
-  DrawChart(systems, time, intervals, p) {
-    console.log("number of systems : " + systems);
-    console.log("Time T: " + time);
-    console.log("N : " + intervals);
-    console.log("probability : " + p);
-
+  DrawChart(M, time, intervals, interval_len, p) {
     const canvasWidth = this.canvas.width;
     const canvasHeight = this.canvas.height;
 
-    //this.DrawHistogramArea(canvasHeight, time);
-    //this.DrawHistogramArea(canvasHeight, time/2);
+    this.DrawHistogramArea(canvasHeight, time);
+    this.DrawHistogramArea(canvasHeight, time/2);
 
     let systems_color = [];
-    for (let i = 0; i < systems; i++) {
+    for (let i = 0; i < M; i++) {
       systems_color.push(getRandomColor());
     }
 
-    //this.context.lineWidth = 1;
-
-    for (let i = 0; i < systems; i++) {
+    let scores = [];
+    for (let i = 0; i < M; i++) {
+      let score = [];
+      let value = 0;
       let y = canvasHeight;   // Inizializza y al centro del rettangolo
       this.context.strokeStyle = systems_color[i];
       this.context.beginPath();
-      this.context.moveTo(i * 10, y);
-      this.context.lineTo(i * 10, 0);
+      this.context.moveTo(0, y);
       this.context.stroke();
-      this.context.closePath();
+      
 
       for (let j = 0; j < intervals; j++) {
+        
         let random = Math.random().toFixed(2);
-        //console.log(random <= p);
+        
+        if (random <= p) {
+          value++;
+          let x = (j+1) * interval_len;
+          this.context.lineTo((j+1) * interval_len , y-=1);
+        }
+        else {
+          this.context.lineTo((j+1) * interval_len , y);
+        }
+        score.push(value);
+        this.context.stroke();
       }
+      this.context.closePath();
+      scores.push(score);
     }
+    let tri = this.getScore(scores, time/2, interval_len);
+    this.DrawHistogram(tri, canvasHeight, time/2, interval_len);
+
+    tri = this.getScore(scores, time, interval_len);
+    this.DrawHistogram(tri, canvasHeight, time, interval_len);
+  }
+
+  getScore(scores, time, interval_len) {
+    let result = [];
+    let index = time / interval_len;
+    for (let i = 0; i < scores.length; i++) {
+      result.push(scores[i][index-1]);
+    }
+    return result;
+  }
+    
+
+  DrawHistogram(scores, height, time, interval_len) {
+    let value = time / interval_len;
+    let color = this.context.strokeStyle;
+    this.context.strokeStyle = 'black';
+    this.context.lineWidth = 4;
+    let obj = {};
+    for (let i=0; i < scores.length; i++) {
+      obj[scores[i]] = (obj[scores[i]] || 0) +1 ;
+    }
+    
+    for (const [key, value] of Object.entries(obj)) {
+      this.context.beginPath();
+      let y;
+      y = height - key;
+      
+      this.context.moveTo(time, y);
+      this.context.lineTo(time + ( 5 * value ) , y);
+      this.context.stroke();
+      this.context.closePath();
+    }
+    this.context.strokeStyle = color;
+    this.context.lineWidth = 1;
   }
   
 }
