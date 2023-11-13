@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discard Probability</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="input-container">
+        <label for="systems">Systems:</label>
+        <input type="number" class="short-input" id="systems" name="systems" value="10000" min="1" step="1">
+        
+        <label for="attacks">Attacks:</label>
+        <input type="number" class="short-input" id="attacks" name="attacks" value="200" min="1" step="1">
+        
+        <label for="p">p:</label>
+        <input type="number" id="p" name="p" value="0.35" min="0" max="1" step="0.05">
+        
+        <button type="button" onclick="main()">Simulate discard</button>
+    </div>
+
+    <div id="tableContainer"></div>
+
+    <script>
+
+        function main() {
+            const systems = document.getElementById('systems').value;
+            const attacks = document.getElementById('attacks').value;
+            const prob = document.getElementById('p').value;
+
+            const P = Array.from({ length: 9 }, (_, k) => (k + 2) * 10);   // [20, 30, 40, 50, ... , 100]
+            const S = [20, 60, 100];
+            table = [];
+
+            P.forEach( (p) => {
+                S.forEach( (s) => {
+                    discard_probability = simulateDiscard(systems, attacks, prob, p, s);
+                    row = {};
+                    row['P'] = p;
+                    row['S'] = s;
+                    row['discard_probability'] = (discard_probability * 100).toFixed(2) + "%";
+                    table.push(row);
+                })
+            });
+            //console.table(table);
+
+            const newTable = document.createElement("table");
+            newTable.innerHTML = "<thead><th>P</th><th>S</th><th>discard_probability</th></thead>";
+            for (row of table) {
+                const newRow = document.createElement("tr");
+                const tdP = document.createElement("td");
+                const tdS = document.createElement("td");
+                const tdProb = document.createElement("td");
+                tdP.textContent = row.P;
+                tdS.textContent = row.S;
+                tdProb.textContent = row.discard_probability;
+                newRow.appendChild(tdP);
+                newRow.appendChild(tdS);
+                newRow.appendChild(tdProb);
+                newTable.appendChild(newRow);
+            }
+            const target = document.getElementById('tableContainer');
+            target.appendChild(newTable);
+        }
+
+
+        function simulateDiscard(systems, attacks, prob, P, S) {
+
+            let cnt = 0;
+
+            for (let i = 0; i < systems; i++) {
+
+                let penetration_score = 0;
+                let security_score = 0;
+
+                for (let j = 0; j < attacks; j++) {
+
+                    Math.random() <= prob ? penetration_score++ : security_score++;
+                    
+                    if (penetration_score >= P) {
+                        cnt += 1;
+                        break;
+                    }
+                    else if (security_score >= S) {
+                        break;
+                    }
+                }
+            }
+            //discard_probability = cnt / systems;
+            return cnt / systems;
+
+        }
+
+
+
+    </script>
+</body>
+</html>
