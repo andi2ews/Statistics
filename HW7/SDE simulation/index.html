@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Euler-Maruyama SDE Simulation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div id="input-container">
+    <div>
+      <label for="time">T:</label>
+      <input type="number" id="time" name="time" min="1" value="1">
+    </div>
+
+    
+    <div>
+      <label for="intervals">N:</label>
+      <input type="number" id="intervals" name="intervals" min="1" value="200">
+    </div>
+    
+
+    <div>
+      <label for="simulations"># simulations:</label>
+      <input type="number" id="simulations" name="simulations" min="1" value="200">
+    </div>
+
+    <div>
+      <label for="initial_value">initial value:</label>
+      <input type="number" id="initial_value" name="initial_value" step="1" value="0">
+    </div>
+
+    <div>
+      <label for="mu">μ:</label>
+      <input class="small-input" type="number" id="mu" name="mu" step="0.1" value="0" disabled>
+    </div>
+
+    <div>
+      <label for="sigma">σ:</label>
+      <input class="small-input" type="number" id="sigma" name="sigma" step="0.1" value="0" disabled>
+    </div>
+
+    <div>
+      <label for="theta">θ:</label>
+      <input class="small-input" type="number" id="theta" name="theta" step="0.1" value="0" disabled>
+    </div>
+
+    
+    <div>
+      <label for="a">a:</label>
+      <input class="small-input" type="number" id="a" name="a" step="0.1" value="0" disabled>
+    </div>
+
+    <div>
+      <label for="b">b:</label>
+      <input class="small-input" type="number" id="b" name="b" step="0.1" value="0" disabled>
+    </div>
+
+    <div>
+      <label for="sde">SDE:</label>
+      <select id="sde" name="sde" onchange="setParameter(event)">
+        <option disabled selected>Choose SDE</option>
+
+        <option value="CIR">Cox Ingersoll Ross</option>
+
+        <option value="geometric_brownian">Geometric Brownian</option>
+
+        <option value="hull_white">Hull-White</option>
+
+        <option value="OU">Ornstein Uhlenbeck</option>
+
+        <option value="vasicek">Vasicek</option>
+      </select>
+    </div>
+
+
+  </div>
+
+  <div id="button-container">
+    <div>
+      <button id="button" disabled>Generate</button>
+    </div>
+  </div>
+
+
+    <hr>
+    <script>
+      function setParameter(event) {
+        document.getElementById("mu").disabled = false;
+        document.getElementById("sigma").disabled = false;
+        document.getElementById("theta").disabled = false;
+        document.getElementById("a").disabled = false;
+        document.getElementById("b").disabled = false;
+        document.getElementById("button").disabled = false;
+
+        switch(document.getElementById("sde").value) {
+        case SDE.Cox_Ingersoll_Ross:
+          document.getElementById("initial_value").value = 0.025;
+          document.getElementById("mu").disabled = true;
+          document.getElementById("sigma").value = 0.02; 
+          document.getElementById("theta").disabled = true;
+          document.getElementById("a").value = 1;
+          document.getElementById("b").value = 0.6;
+          break;
+        
+        case SDE.Geometric_Brownian:
+          document.getElementById("initial_value").value = 100;
+          document.getElementById("mu").value = 1;
+          document.getElementById("sigma").value = 0.4; 
+          document.getElementById("theta").disabled = true;
+          document.getElementById("a").disabled = true;
+          document.getElementById("b").disabled = true;
+          break;
+
+        case SDE.Hull_White:
+          document.getElementById("initial_value").value = 100;
+          document.getElementById("mu").disabled = true;
+          document.getElementById("sigma").value = 0.02; 
+          document.getElementById("theta").value = -0.1;
+          document.getElementById("a").value = 0.1;
+          document.getElementById("b").disabled = true;
+          break;
+        
+        case SDE.Ornstein_Uhlenbeck:
+          console.log("Ornstein_Uhlenbeck");
+          document.getElementById("initial_value").value = 1;
+          document.getElementById("mu").disabled = true;
+          document.getElementById("sigma").value = 0.5; 
+          document.getElementById("theta").value = 3.4;
+          document.getElementById("a").disabled = true;
+          document.getElementById("b").disabled = true;
+          break;
+        
+        case SDE.Vasicek:
+          console.log("Vasicek");
+          document.getElementById("initial_value").value = 1;
+          document.getElementById("mu").disabled = true;
+          document.getElementById("sigma").value = 0.25; 
+          document.getElementById("theta").disabled = true;
+          document.getElementById("a").value = 2;
+          document.getElementById("b").value = 0.04;
+          break;
+
+        default:
+          break; 
+        }
+      }
+    </script>
+    <script src="resizableRect.js"></script>
+    <script src="SDE.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
