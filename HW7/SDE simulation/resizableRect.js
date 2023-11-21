@@ -12,14 +12,12 @@ class ResizableRectangle {
     this.initialX = 0;
     this.initialY = 0;
 
-    // Aggiunta di un elemento canvas per il disegno
     this.canvas = document.createElement("canvas");
     this.canvas.width = larghezza;
     this.canvas.height = altezza;
     this.canvas.style.position = "absolute";
     this.element.appendChild(this.canvas);
     this.context = this.canvas.getContext("2d");
-    //this.context.fillRect(0, 0, larghezza, altezza);
 
     this.element.addEventListener("mousedown", (e) => this.iniziaTrascinamento(e));
     document.addEventListener("mousemove", (e) => this.trascina(e));
@@ -50,23 +48,10 @@ class ResizableRectangle {
   }
 
   clear() {
+    this.context.fillStyle = "black";
     this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
-  drawino() {
-    this.context.strokeStyle = "white";
-    this.context.beginPath();
-    this.context.moveTo(50, 100);
-    this.context.lineTo(100, 50);
-    this.context.lineTo(150, 100);
-    this.context.lineTo(200, 150);
-    this.context.stroke();
-    this.context.closePath();
-  }
-
-  getScore() {
-
-  }
 
   DrawHistogramArea(width, height, x_start, y_start, margin_horizontal) {
     let histogram_x_start = width / 5 * 4;
@@ -117,11 +102,12 @@ class ResizableRectangle {
     const x = rect_x_start;
     const y = (rect_y_end + rect_x_start ) / 2;
 
-    //console.log(max_distance / (rect_y_end - y) );   // 1 pixel vale
+    //console.log(max_distance / (rect_y_end - y) );   // 1 pixel value
 
-    const y_steps = max_distance / (rect_y_end - y);   // 1 pixel vale
+    const y_steps = max_distance / (rect_y_end - y);   // 1 pixel value
 
     
+    //draw lines
     this.context.lineWidth = 1;
     for (let i = 0; i < simulations; i++) {
       this.context.strokeStyle= getRandomColor();
@@ -136,32 +122,31 @@ class ResizableRectangle {
       }
       this.context.closePath();
     }
-  }
 
-
-  DrawSimulations(simulations, results) {
-    const canvasWidth = this.canvas.width;
-    const canvasHeight = this.canvas.height
-
-
+    //draw histogram
+    let curr_x = histogram_x_start;
+    this.context.lineWidth = 2;
+    let dict = {};
+    const histogram_width = rect_width - histogram_x_start;
+    let max_frequency = 0;
     for (let i = 0; i < simulations; i++) {
-      this.context.strokeStyle = getRandomColor();
-      
-      let y = canvasHeight / 2;
-      this.context.beginPath();
-      this.context.moveTo(0,  y);
-      //console.log(results);
-      for (let j = 0; j < results[0].length; j++) {
-        let increment = results[i][j]['increment'];
-        y -= (increment * 30);
-        this.context.lineTo((j+1), y);
-        this.context.stroke(); 
-      }
-      this.context.closePath();
+      let initial_value = results[i][0]['value'];
+      let final_value = results[i][N]['value'];
+      let curr_y = Math.floor(y + ((initial_value - final_value) / y_steps));
+      dict[curr_y] = (dict[curr_y] || 0) + 1;
+      max_frequency = dict[curr_y] > max_frequency ? dict[curr_y] : max_frequency;
+    }
 
+    let histogram_rect_size = histogram_width / max_frequency;
+    this.context.fillStyle= "#F68B08";
+    for (const [key, value] of Object.entries(dict)) {
+      
+      this.context.beginPath();
+      this.context.fillRect(curr_x, key, value * histogram_rect_size, 2.5);
+      this.context.stroke();
+      this.context.closePath();
     }
   }
-  
 }
 
 function getRandomColor() {
